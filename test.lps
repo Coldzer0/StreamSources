@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="test.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="9"/>
+        <CursorPos X="58" Y="33"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\inc\heaph.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="81"/>
+        <CursorPos X="10" Y="96"/>
+        <UsageCount Value="10"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\packages\winunits-jedi\src\jwaws2tcpip.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="477"/>
+        <CursorPos X="50" Y="487"/>
+        <UsageCount Value="10"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="5" HistoryIndex="4">
+      <Position1>
+        <Filename Value="test.lpr"/>
+        <Caret Line="33" Column="6" TopLine="25"/>
+      </Position1>
+      <Position2>
+        <Filename Value="test.lpr"/>
+        <Caret Line="39" Column="3" TopLine="28"/>
+      </Position2>
+      <Position3>
+        <Filename Value="test.lpr"/>
+        <Caret Line="40" TopLine="31"/>
+      </Position3>
+      <Position4>
+        <Filename Value="test.lpr"/>
+        <Caret Line="41" TopLine="31"/>
+      </Position4>
+      <Position5>
+        <Filename Value="test.lpr"/>
+        <Caret Line="47" TopLine="31"/>
+      </Position5>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="test.lpr"/>
+        <Line Value="33"/>
+      </Item1>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>
