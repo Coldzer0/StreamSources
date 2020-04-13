@@ -93,13 +93,50 @@ begin
 
   recvbuflen := DEFAULT_BUFLEN;
 
-
+  Initialize(recvbuf);
   repeat
     iResult := recv(ClientSocket, recvbuf, recvbuflen, 0);
+    if iResult > 0 then
+    begin
+      WriteLn('Bytes received: ', iResult);
 
-
-
+      iSendResult := send(ClientSocket, recvbuf, iResult, 0);
+      if iSendResult = SOCKET_ERROR then
+      begin
+        WriteLn('send failed: ', WSAGetLastError);
+        closesocket(ClientSocket);
+        WSACleanup();
+        Exit;
+      end;
+      WriteLn('Bytes sent: ', iSendResult);
+    end
+    else
+    if iResult = 0 then
+    begin
+      WriteLn('Connection closing...');
+    end
+    else
+    begin
+      WriteLn('recv failed: ', WSAGetLastError());
+      closesocket(ClientSocket);
+      WSACleanup();
+      Exit;
+    end;
   until iResult <= 0;
+
+  // shutdown the connection since we're done
+  iResult := shutdown(ClientSocket, SD_SEND);
+  if iResult = SOCKET_ERROR then
+  begin
+    WriteLn('shutdown failed with error: ', WSAGetLastError());
+    closesocket(ClientSocket);
+    WSACleanup();
+    Exit;
+  end;
+
+  // cleanup
+  closesocket(ClientSocket);
+  WSACleanup();
 
   WriteLn(#13#10#13#10#13#10);
 end.

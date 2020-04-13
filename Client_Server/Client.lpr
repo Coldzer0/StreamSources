@@ -1,7 +1,7 @@
-program Mal;
+program Client;
 
 uses
-  windows,jwaws2tcpip,jwaWinSock2;
+  jwaws2tcpip,jwaWinSock2;
 
 const
   DEFAULT_PORT = '27015';
@@ -19,7 +19,7 @@ begin
   if ret <> 0 then
   begin
     WriteLn('WSAStartup failed: ', ret);
-    ExitProcess(1);
+    exit;
   end
   else
     WriteLn('WSAStartup Ok');
@@ -37,7 +37,7 @@ begin
   begin
     WriteLn('getaddrinfo failed : ', iResult);
     WSACleanup;
-    ExitProcess(1);
+    exit;
   end;
   if Result = nil then
   begin
@@ -54,7 +54,7 @@ begin
     WriteLn('Error at socket(): ',WSAGetLastError);
     freeaddrinfo(Result);
     WSACleanup;
-    ExitProcess(1);
+    exit;
   end;
 
   iResult := connect(ConnectSocket,ptr^.ai_addr,Integer(ptr^.ai_addrlen));
@@ -69,7 +69,7 @@ begin
   begin
     WriteLn('Unable to connect to server!');
     WSACleanup;
-    ExitProcess(1);
+    exit;
   end;
 
 

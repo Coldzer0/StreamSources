@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="C:\fpc\3.0.4\bin\i386-win32\fpc.exe" Date="1262918680"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -l -vewnhibq -FiE:\Stream\S1\lib\i386-win32 -FuE:\Stream\S1\ -FUE:\Stream\S1\lib\i386-win32\ -FEE:\Stream\S1\ -oE:\Stream\S1\test.exe test.lpr"/>
-</CONFIG>
